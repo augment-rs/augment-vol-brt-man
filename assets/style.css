@@ -1,0 +1,28 @@
+#root {
+	background-color: #1E1E2E;
+
+	padding: 8px;
+	border-radius: 12px;
+}
+
+#volume-box {
+	background-color: #313244;
+
+	border-radius: 8px;
+}
+
+#level {
+	background-color: #89B4FA;
+
+    border-radius: 8px;
+}
+
+#level-extended {
+	background-color: #F38BA8;
+
+    border-radius: 8px;
+}
+
+#level-min {
+	background-color: transparent;
+}
