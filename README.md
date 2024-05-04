@@ -6,10 +6,9 @@ Manages volume and brightness in Hyprland.
 
 ### Cargo
 
-    # cargo install augment-vol-brt-man --version "0.1.0-alpha" --root /usr/local
+    # cargo install augment-vol-brt-man --version "0.1.1-alpha" --root /usr/local
 
-> [!IMPORTANT]
-> `augment-vol-brt-man` must be installed outside the user home directory due permission pupposes.
+> [!IMPORTANT] > `augment-vol-brt-man` must be installed outside the user home directory due permission pupposes.
 
 ## Usage
 
