@@ -25,14 +25,13 @@ enum Subcommands {
 fn main() {
     let cli = Cli::parse();
     let config = Config::new();
-    let mut volume = Volume::new(config.extended_volume);
-    let mut brightness = Brightness::default();
 
     match cli.subcommand {
         Subcommands::Init => {
             init();
         }
         Subcommands::VolumeUp => {
+            let mut volume = Volume::new(config.extended_volume);
             volume.increase_volume();
 
             display(
@@ -44,6 +43,7 @@ fn main() {
             );
         }
         Subcommands::VolumeDown => {
+            let mut volume = Volume::new(config.extended_volume);
             volume.decrease_volume();
 
             display(
@@ -55,6 +55,7 @@ fn main() {
             );
         }
         Subcommands::VolumeMute => {
+            let mut volume = Volume::new(config.extended_volume);
             volume.mute();
 
             display(
@@ -66,11 +67,13 @@ fn main() {
             )
         }
         Subcommands::BrightnessUp => {
+            let mut brightness = Brightness::default();
             brightness.increase_brightness();
 
             display(DisplayType::Brightness, brightness.current_brightness)
         }
         Subcommands::BrightnessDown => {
+            let mut brightness = Brightness::default();
             brightness.decrease_brightness();
 
             display(DisplayType::Brightness, brightness.current_brightness)
